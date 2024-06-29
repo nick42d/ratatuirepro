@@ -29,7 +29,7 @@ fn main() -> Result<()> {
         terminal.draw(|frame| {
             let area = frame.size();
             let style = styles.next().unwrap();
-            let text = "Text\x00".to_string();
+            let text = "Text\0".to_string();
             let w = Paragraph::new(text)
                 .style(style)
                 .block(Block::bordered().title("Press q to quit"));
